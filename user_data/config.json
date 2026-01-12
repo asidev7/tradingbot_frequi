@@ -1,0 +1,86 @@
+
+{
+    "$schema": "https://schema.freqtrade.io/schema.json",
+    "max_open_trades": 3,
+    "stake_currency": "USDT",
+    "stake_amount": 5,
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "dry_run": false,
+    "dry_run_wallet": 1000,
+    "cancel_open_orders_on_exit": true,
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+      "leverage": 1,
+      "strategy": "ShortAllPairsNoCondition",
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    
+   "exchange": {
+    "name": "bybit",
+    "key": "9WxoII8ZfwQDjGXK75",
+    "secret": "DTmD0afEJDq11W8hR7ljOf1mlrt2iNOvHe4O",
+    "pair_whitelist": ["BTC/USDT", "ETH/USDT", "SOL/USDT"],
+    "ccxt_config": {
+      "options": {
+        "defaultType": "swap",
+        "category": "linear"
+      }
+    },
+    "pair_blacklist": [],
+     "timeframe": "5m"
+}
+,
+    "pairlists": [
+        {
+            "method": "VolumePairList",
+            "number_assets": 10,
+            "sort_key": "quoteVolume",
+            "min_value": 0,
+            "refresh_period": 1800
+        }
+    ],
+    "telegram": {
+        "enabled": true,
+        "token": "8578861866:AAFHKkf8S4YrljFv92K9FA66TU13ftlo-Sc",
+        "chat_id": "1077047645"
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "45af2054906281245e110333977b8be88e7b8c934390ac3a60e8142732963dee",
+        "ws_token": "GVrpLdAw51RQpE4Qe4aIPYzyYvTDtF9Ztw",
+        "CORS_origins": [],
+        "username": "freqtrader",
+        "password": "asidev7"
+    },
+    "bot_name": "freqtrade",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    }
+
+}
