@@ -1,119 +1,110 @@
 {
-    "$schema": "https://schema.freqtrade.io/schema.json",
-    "bot_name": "freqtrade",
-    "strategy": "TrendVolume5pAdvanced",
-    "max_open_trades": 7,
-    "stake_currency": "USDT",
-    "stake_amount": "unlimited",
-    "tradable_balance_ratio": 0.95,
-    "fiat_display_currency": "USD",
-    "dry_run": false,
-    "dry_run_wallet": 1000,
-    "cancel_open_orders_on_exit": false,
-    "trading_mode": "spot",
-    "margin_mode": "",
-    "force_entry_enable": false,
-    "initial_state": "running",
-    "internals": {
-        "process_throttle_secs": 5
-    },
-    "unfilledtimeout": {
-        "entry": 10,
-        "exit": 10,
-        "exit_timeout_count": 0,
-        "unit": "minutes"
-    },
-    "entry_pricing": {
-        "price_side": "other",
-        "use_order_book": true,
-        "order_book_top": 1,
-        "price_last_balance": 0.0,
-        "check_depth_of_market": {
-            "enabled": true,
-            "bids_to_ask_delta": 1
-        }
-    },
-    "exit_pricing": {
-        "price_side": "other",
-        "use_order_book": true,
-        "order_book_top": 1
-    },
-    "exchange": {
-        "name": "bybit",
-        "key": "SxvXfODkUOccsrDGL7",
-        "secret": "jzfxApyyAQDkiQEzawSAYZJ1GkvXjJVpeqXv",
-        "ccxt_config": {
-            "enableRateLimit": true,
-            "options": {
-                "adjustForTimeDifference": true
-            }
-        },
-        "ccxt_async_config": {},
-        "pair_whitelist": ["BTC/USDT", "ETH/USDT", "SOL/USDT"],
-        "pair_blacklist": []
-    },
-    "pairlists": [
-        {
-            "method": "VolumePairList",
-            "number_assets": 100,
-            "sort_key": "quoteVolume",
-            "min_value": 0,
-            "refresh_period": 1800
-        }
-    ],
-    "telegram": {
-        "enabled": true,
-        "token": "8480580520:AAEDnP81DDfFoHI0T36Lk_uaKAs4hogZjGc",
-        "chat_id": "7453313590"
-    },
-    "api_server": {
-        "enabled": true,
-        "listen_ip_address": "0.0.0.0",
-        "listen_port": 8080,
-        "verbosity": "error",
-        "enable_openapi": false,
-        "jwt_secret_key": "dc5b7753744249a8fe76c873ddf447dea4b3972343a5cfe8ea587ff60ea26956",
-        "ws_token": "Twy4-5BzTJIgI5WfvLfISqf1GxZjpLtwgw",
-        "CORS_origins": [],
-        "username": "asitechsolution",
-        "password": "asitechsolution"
-    },
-    "logging": {
-        "enabled": true,
-        "logfile": "freqtrade.log",
-        "loglevel": "INFO",
-        "logrotate": true
-    },
-    "dry_run": false,
-    "edge_settings": {
-        "stoploss": -0.04,
-        "take_profit": 0.05,
-        "trailing_stop": false,
-        "trailing_stop_positive": 0.0,
-        "trailing_stop_positive_offset": 0.0
-    },
-    "timeframe": "5m",
-    "startup_candle_count": 20,
-    "max_open_trades": 7,
-    "unfilledtimeout": {
-        "entry": 10,
-        "exit": 10,
-        "exit_timeout_count": 0,
-        "unit": "minutes"
-    },
-    "order_types": {
-        "entry": "limit",
-        "exit": "limit",
-        "stoploss": "market",
-        "stoploss_on_exchange": false,
-        "take_profit": "limit",
-        "force_entry_enabled": false
-    },
-    "position_adjustment_enable": false,
-    "margin_mode": "",
-    "trailing_stop": {
-        "enabled": false,
-        "positive_offset": 0.0,
-        "trailing_only_offset_is_reached": false
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "bot_name": "freqtrade",
+  "strategy": "TrendVolume5pAdvanced",
+  "max_open_trades": 10,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.95,
+  "fiat_display_currency": "USD",
+  "dry_run": false,
+  "dry_run_wallet": 1000,
+  "cancel_open_orders_on_exit": false,
+  "trading_mode": "spot",
+  "margin_mode": "",
+  "force_entry_enable": false,
+  "initial_state": "running",
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0.0,
+    "check_depth_of_market": {
+      "enabled": true,
+      "bids_to_ask_delta": 1
     }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exchange": {
+    "name": "bybit",
+    "key": "SxvXfODkUOccsrDGL7",
+    "secret": "jzfxApyyAQDkiQEzawSAYZJ1GkvXjJVpeqXv",
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "options": {
+        "adjustForTimeDifference": true
+      }
+    },
+    "ccxt_async_config": {},
+    "pair_whitelist": ["BTC/USDT", "ETH/USDT", "SOL/USDT"],
+    "pair_blacklist": []
+  },
+  "pairlists": [
+    {
+      "method": "VolumePairList",
+      "number_assets": 100,
+      "sort_key": "quoteVolume",
+      "min_value": 0,
+      "refresh_period": 1800
+    }
+  ],
+  "telegram": {
+    "enabled": true,
+    "token": "8480580520:AAEDnP81DDfFoHI0T36Lk_uaKAs4hogZjGc",
+    "chat_id": "7453313590"
+  },
+  "api_server": {
+    "enabled": true,
+    "listen_ip_address": "0.0.0.0",
+    "listen_port": 8080,
+    "verbosity": "error",
+    "enable_openapi": false,
+    "jwt_secret_key": "dc5b7753744249a8fe76c873ddf447dea4b3972343a5cfe8ea587ff60ea26956",
+    "ws_token": "Twy4-5BzTJIgI5WfvLfISqf1GxZjpLtwgw",
+    "CORS_origins": [],
+    "username": "asitechsolution",
+    "password": "asitechsolution"
+  },
+  "logging": {
+    "enabled": true,
+    "logfile": "freqtrade.log",
+    "loglevel": "INFO",
+    "logrotate": true
+  },
+  "edge_settings": {
+    "stoploss": -0.04,
+    "take_profit": 0.05,
+    "trailing_stop": false,
+    "trailing_stop_positive": 0.0,
+    "trailing_stop_positive_offset": 0.0
+  },
+  "timeframe": "5m",
+  "startup_candle_count": 200,
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "market",
+    "stoploss_on_exchange": false,
+    "take_profit": "limit",
+    "force_entry_enabled": false
+  },
+  "position_adjustment_enable": false,
+  "trailing_stop": {
+    "enabled": false,
+    "positive_offset": 0.0,
+    "trailing_only_offset_is_reached": false
+  }
 }
